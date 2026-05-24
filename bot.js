@@ -247,6 +247,12 @@ server.listen(PORT, () => {
   // بدء الفحص الدوري
   pollMessages();
   setInterval(pollMessages, POLL_INTERVAL);
+}).on('error', (err) => {
+  // إذا فشل خادم الويب، نواصل الفحص بدون خادم
+  console.error(`Web server error: ${err.message}`);
+  console.log('Starting polling without web server...');
+  pollMessages();
+  setInterval(pollMessages, POLL_INTERVAL);
 });
 
 // معالجة الأخطاء
