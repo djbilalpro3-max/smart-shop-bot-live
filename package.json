@@ -1,0 +1,12 @@
+{
+  "name": "smart-shop-bot",
+  "version": "1.0.0",
+  "description": "Smart Shop Facebook Messenger Bot - 24/7 Auto Reply",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
